@@ -8,6 +8,7 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.Map;
 
 
 public class Main {
@@ -24,6 +25,7 @@ public class Main {
     public Main() {
         instance = new Tesseract();
         instance.setDatapath("E:\\Glowny folder MojaJava\\Moje programy\\1.Projekty\\OCRproject\\src\\main\\resources\\tessdata");
+        PokemonService.getInstance().readListPokemonFromFile();
 
         frame = new JFrame();
         frame.setSize(300, 100);
@@ -115,7 +117,18 @@ public class Main {
     public void printTextFromOCR(String text) {
         System.out.println("////////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println(text);
+        findPokemonInText(text);
         System.out.println("////////////////////////////////////////////////////////////////////////////////////////////");
+    }
+
+    public void findPokemonInText(String text){
+        for (Map.Entry<String, PokemonModel> entry : PokemonService.getInstance().getPokedex().entrySet()) {
+            System.out.println(text.toLowerCase());
+            System.out.println(entry.getValue().getName().toLowerCase());
+            if(text.toLowerCase().contains(entry.getValue().getName().toLowerCase())){
+                System.out.println(entry.toString());
+            }
+        }
     }
 
     public void takeScreenshot() throws IOException, AWTException {

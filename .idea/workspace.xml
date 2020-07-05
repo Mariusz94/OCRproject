@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcef9c41-e6b6-4d09-ae1f-6c9dca61287b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OCRproject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/tessdata/eng.traineddata" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ParseHTMl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PokemonModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PokemonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +25,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="E:\Glowny folder MojaJava\Moje programy\1.Projekty\OCRproject" />
+        <option value="E:\Glowny folder MojaJava\Moje programy\1.Projekty\OCRproject\.idea" />
+      </set>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -54,9 +63,23 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="OCRproject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParseHTMl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ParseHTMl" />
+      <module name="OCRproject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test" />
       <module name="OCRproject" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -65,6 +88,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ParseHTMl" />
       </list>
     </recent_temporary>
   </component>
@@ -78,18 +103,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1593869871736</updated>
-      <workItem from="1593869883706" duration="19686000" />
+      <workItem from="1593869883706" duration="19768000" />
+      <workItem from="1593894017030" duration="24211000" />
     </task>
+    <task id="LOCAL-00001" summary="general">
+      <created>1593891060091</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1593891060091</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="general" />
+    <option name="LAST_COMMIT_MESSAGE" value="general" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1593878125177">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1593916415947">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593878125177" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593916415947" />
+    <state x="537" y="114" key="CommitChangelistDialog2" timestamp="1593891054218">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="537" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593891054218" />
     <state x="1169" y="291" key="FileChooserDialogImpl" timestamp="1593873391905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -102,29 +144,37 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="683" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593890900207" />
-    <state width="1877" height="238" key="GridCell.Tab.0.bottom" timestamp="1593890307518">
+    <state width="1877" height="245" key="GridCell.Tab.0.bottom" timestamp="1593917787097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="238" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593890307518" />
-    <state width="1877" height="238" key="GridCell.Tab.0.center" timestamp="1593890307518">
+    <state width="1877" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593917787097" />
+    <state width="1877" height="245" key="GridCell.Tab.0.center" timestamp="1593917787097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="238" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593890307518" />
-    <state width="1877" height="238" key="GridCell.Tab.0.left" timestamp="1593890307518">
+    <state width="1877" height="245" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593917787097" />
+    <state width="1877" height="245" key="GridCell.Tab.0.left" timestamp="1593917787096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="238" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593890307518" />
-    <state width="1877" height="238" key="GridCell.Tab.0.right" timestamp="1593890307518">
+    <state width="1877" height="245" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593917787096" />
+    <state width="1877" height="245" key="GridCell.Tab.0.right" timestamp="1593917787097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="238" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593890307518" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593891019013">
+    <state width="1877" height="245" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593917787097" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593891063297">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593891019013" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593891063297" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593894014365">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593894014365" />
     <state x="690" y="275" key="extract.method.dialog" timestamp="1593882063568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593882063568" />
+    <state x="984" y="244" key="run.anything.popup" timestamp="1593900624452">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="984" y="244" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593900624452" />
   </component>
 </project>
