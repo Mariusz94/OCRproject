@@ -1,6 +1,9 @@
+package pokemonGame;
+
+import levenshteinDistance.LevenshteinDistance;
 import net.sourceforge.tess4j.ITesseract;
 import net.sourceforge.tess4j.Tesseract;
-import net.sourceforge.tess4j.TesseractException;;
+import net.sourceforge.tess4j.TesseractException;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -8,6 +11,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 
@@ -24,7 +29,7 @@ public class Main {
 
     public Main() {
         instance = new Tesseract();
-        instance.setDatapath("E:\\Glowny folder MojaJava\\Moje programy\\1.Projekty\\OCRproject\\src\\main\\resources\\tessdata");
+        instance.setDatapath("src\\main\\resources\\tessdata");
         PokemonService.getInstance().readListPokemonFromFile();
 
         frame = new JFrame();
@@ -46,18 +51,14 @@ public class Main {
         Container container = frame.getContentPane();
         jButton = new JButton();
         jButton.setText("Mobby2");
-        jButton.addActionListener((s) -> readOCRPicture(new File("E:\\Glowny folder MojaJava\\Moje programy\\1.Projekty\\OCRproject\\src\\main\\resources\\moby2.jpg")));
         jButton2 = new JButton();
         jButton2.setText("Mobby");
-        jButton2.addActionListener((s) -> readOCRPicture(new File("E:\\Glowny folder MojaJava\\Moje programy\\1.Projekty\\OCRproject\\src\\main\\resources\\moby.png")));
         jButton3 = new JButton();
         jButton3.setText("screenshot");
         jButton3.addActionListener((s) -> {
             try {
                 takeScreenshot();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (AWTException e) {
+            } catch (IOException | AWTException e) {
                 e.printStackTrace();
             }
         });
@@ -76,11 +77,8 @@ public class Main {
             if (files != null && !files[files.length - 1].getName().equals(imageFile != null ? imageFile.getName() : "")) {
                 imageFile = new File(String.valueOf(files[files.length - 1].getAbsoluteFile()));
                 System.out.println("Pobrałem ostatni screen");
-                try {
-                    readPartOfPicture(imageFile,0,0,753,150);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+
+                readPartOfPicture(imageFile, 0, 0, 753, 150);
             }
 
             try {
@@ -91,14 +89,18 @@ public class Main {
         }
     }
 
-    private void readPartOfPicture(File file, int x, int y, int width, int height) throws IOException {
-            if (file != null && !file.getName().equals(lastReadFile != null ? lastReadFile.getName() : "")) {
-                File cutFile = cutImage(ImageIO.read(file), x, y, width, height);
-                lastReadFile = new File(String.valueOf(file.getAbsoluteFile()));
-                readOCRPicture(cutFile);
+    private void readPartOfPicture(File file, int x, int y, int width, int height) {
+        if (file != null && !file.getName().equals(lastReadFile != null ? lastReadFile.getName() : "")) {
+            File cutFile = null;
+            try {
+                cutFile = cutImage(ImageIO.read(file), x, y, width, height);
+            } catch (Exception e) {
+                System.out.println(e);
             }
+            lastReadFile = new File(String.valueOf(file.getAbsoluteFile()));
+            readOCRPicture(cutFile);
+        }
     }
-
 
     public static void main(String[] args) {
         new Main();
@@ -117,18 +119,52 @@ public class Main {
     public void printTextFromOCR(String text) {
         System.out.println("////////////////////////////////////////////////////////////////////////////////////////////");
         System.out.println(text);
-        findPokemonInText(text);
         System.out.println("////////////////////////////////////////////////////////////////////////////////////////////");
+        findPokemonInText(text);
     }
 
-    public void findPokemonInText(String text){
-        for (Map.Entry<String, PokemonModel> entry : PokemonService.getInstance().getPokedex().entrySet()) {
-            System.out.println(text.toLowerCase());
-            System.out.println(entry.getValue().getName().toLowerCase());
-            if(text.toLowerCase().contains(entry.getValue().getName().toLowerCase())){
-                System.out.println(entry.toString());
+    public void findPokemonInText(String text) {
+
+        List<String> listOfStringOfSlash = new ArrayList<>();
+        String[] stringArrayOfSpace = text.split(" ");
+        //Split by slash
+        for (String s : stringArrayOfSpace) {
+            if (s.contains("/")) {
+                for (String s1 : s.split("/")) {
+                    listOfStringOfSlash.add(s1);
+
+                }
+                continue;
             }
+            listOfStringOfSlash.add(s);
         }
+        //Spit by new line
+        List<String> listOfString = new ArrayList<>();
+
+        for (String s : listOfStringOfSlash) {
+            if (s.contains("\n")) {
+                for (String s1 : s.split("\n")) {
+                    listOfString.add(s1);
+
+                }
+                continue;
+            }
+            listOfString.add(s);
+        }
+
+        //Print all words in text
+        /*for (String s : listOfString) {
+            System.out.print(s + " ||");
+        }*/
+
+        for (String s : listOfString) {
+            if (s.length() > 3)
+                for (Map.Entry<String, PokemonModel> entry : PokemonService.getInstance().getPokedex().entrySet()) {
+                    int val = LevenshteinDistance.calculateLevenshteinDistance(s.toLowerCase().toCharArray(), entry.getValue().getName().toLowerCase().toCharArray());
+                    if (val < 2) System.out.println(entry.getValue().toString());
+                }
+        }
+
     }
 
     public void takeScreenshot() throws IOException, AWTException {
@@ -136,12 +172,13 @@ public class Main {
         File file = new File("E:\\Glowny folder MojaJava\\Moje programy\\1.Projekty\\OCRproject\\src\\main\\resources\\screenshot" + System.currentTimeMillis() + ".png");
         ImageIO.write(image, "png", file);
         System.out.println("Zdjęcie zrobione");
-        cutImage(image, 0,0,100, 100);
+        cutImage(image, 0, 0, 100, 100);
     }
 
     public File cutImage(BufferedImage src, int x, int y, int width, int height) throws IOException {
         BufferedImage dest = src.getSubimage(x, y, width, height);
-        File file = new File("E:\\Glowny folder MojaJava\\Moje programy\\1.Projekty\\OCRproject\\src\\main\\resources\\screenshot" + System.currentTimeMillis() + "_cut.png");
+        File file = new File("src/main/resources/image/cut/screenshot" + System.currentTimeMillis() + "_cut.png");
+
         ImageIO.write(dest, "png", file);
         System.out.println("Wycinek został wykonany");
         return file;

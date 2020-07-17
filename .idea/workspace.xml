@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcef9c41-e6b6-4d09-ae1f-6c9dca61287b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ParseHTMl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PokemonModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/PokemonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/levenshteinDistance/LevenshteinDistance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokemonGame/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ParseHTMl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/prserHTML/ParseHTML.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PokemonModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokemonGame/PokemonModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PokemonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pokemonGame/PokemonService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,26 +26,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IgnoredFileRootStore">
-    <option name="generatedRoots">
-      <set>
-        <option value="E:\Glowny folder MojaJava\Moje programy\1.Projekty\OCRproject" />
-        <option value="E:\Glowny folder MojaJava\Moje programy\1.Projekty\OCRproject\.idea" />
-      </set>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1eDxGpDBym5R3eH8amKaM7MA7eP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -55,31 +39,49 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SwingAppicationTeach" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Word_Generator" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="pokemonGame.Main" />
       <module name="OCRproject" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParseHTMl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ParseHTMl" />
+    <configuration name="ParseHTML" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="prserHTML.ParseHTML" />
       <module name="OCRproject" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test" />
+    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test2" />
+      <module name="OCRproject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Test3" />
+      <module name="OCRproject" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSource" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TestSource" />
       <module name="OCRproject" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -88,8 +90,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.ParseHTMl" />
+        <item itemvalue="Application.Test3" />
+        <item itemvalue="Application.Test2" />
+        <item itemvalue="Application.TestSource" />
+        <item itemvalue="Application.ParseHTML" />
       </list>
     </recent_temporary>
   </component>
@@ -104,7 +108,9 @@
       <option name="presentableId" value="Default" />
       <updated>1593869871736</updated>
       <workItem from="1593869883706" duration="19768000" />
-      <workItem from="1593894017030" duration="24211000" />
+      <workItem from="1593894017030" duration="48959000" />
+      <workItem from="1594375426796" duration="257000" />
+      <workItem from="1594376152729" duration="4697000" />
     </task>
     <task id="LOCAL-00001" summary="general">
       <created>1593891060091</created>
@@ -113,29 +119,48 @@
       <option name="project" value="LOCAL" />
       <updated>1593891060091</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="general">
+      <created>1593918448535</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1593918448535</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="general" />
     <option name="LAST_COMMIT_MESSAGE" value="general" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1593916415947">
+    <state x="743" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594314358852">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593916415947" />
-    <state x="537" y="114" key="CommitChangelistDialog2" timestamp="1593891054218">
+    <state x="743" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1594314358852" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1593957700708">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="537" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593891054218" />
-    <state x="1169" y="291" key="FileChooserDialogImpl" timestamp="1593873391905">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1593957700708" />
+    <state x="1074" y="237" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1594375674402">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1169" y="291" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1593873391905" />
+    <state x="1074" y="237" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594375674402" />
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594311762962">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594311762962" />
+    <state x="537" y="114" key="CommitChangelistDialog2" timestamp="1593918442949">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="537" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1593918442949" />
+    <state x="1169" y="291" key="FileChooserDialogImpl" timestamp="1594376676461">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1169" y="291" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594376676461" />
     <state x="830" y="413" key="Github.ShareDialog" timestamp="1593890868597">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -144,34 +169,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="683" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593890900207" />
-    <state width="1877" height="245" key="GridCell.Tab.0.bottom" timestamp="1593917787097">
+    <state width="1004" height="309" key="GridCell.Tab.0.bottom" timestamp="1594667777675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="245" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1593917787097" />
-    <state width="1877" height="245" key="GridCell.Tab.0.center" timestamp="1593917787097">
+    <state width="1004" height="309" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594667777675" />
+    <state width="1004" height="309" key="GridCell.Tab.0.center" timestamp="1594667777675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="245" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1593917787097" />
-    <state width="1877" height="245" key="GridCell.Tab.0.left" timestamp="1593917787096">
+    <state width="1004" height="309" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594667777675" />
+    <state width="1004" height="309" key="GridCell.Tab.0.left" timestamp="1594667777675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="245" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1593917787096" />
-    <state width="1877" height="245" key="GridCell.Tab.0.right" timestamp="1593917787097">
+    <state width="1004" height="309" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594667777675" />
+    <state width="1004" height="309" key="GridCell.Tab.0.right" timestamp="1594667777675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="245" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1593917787097" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593891063297">
+    <state width="1004" height="309" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594667777675" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1594375640965">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593891063297" />
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1593894014365">
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1594375640965" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1593918453703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593894014365" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1593918453703" />
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1594375433969">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594375433969" />
     <state x="690" y="275" key="extract.method.dialog" timestamp="1593882063568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1593882063568" />
+    <state x="342" y="215" key="new project wizard" timestamp="1594296321509">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="215" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1594296321509" />
     <state x="984" y="244" key="run.anything.popup" timestamp="1593900624452">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

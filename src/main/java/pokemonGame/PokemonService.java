@@ -1,3 +1,5 @@
+package pokemonGame;
+
 import java.awt.*;
 import java.io.*;
 import java.util.*;
@@ -24,7 +26,7 @@ public class PokemonService {
     }
 
     public void saveListPokemonToFile(){
-        File file = new File("E:\\Glowny folder MojaJava\\Moje programy\\1.Projekty\\OCRproject\\src\\main\\resources\\pokedex.txt");
+        File file = new File("src\\main\\resources\\pokedex.txt");
         PrintWriter printWriter = null;
         try {
             printWriter = new PrintWriter(file);
@@ -66,7 +68,7 @@ public class PokemonService {
     public void readListPokemonFromFile(){
         FileReader fileToRead = null;
         try {
-            fileToRead = new FileReader("E:\\Glowny folder MojaJava\\Moje programy\\1.Projekty\\OCRproject\\src\\main\\resources\\pokedex.txt");
+            fileToRead = new FileReader("src\\main\\resources\\pokedex.txt");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

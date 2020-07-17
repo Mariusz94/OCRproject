@@ -1,7 +1,11 @@
+package prserHTML;
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import pokemonGame.PokemonModel;
+import pokemonGame.PokemonService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -10,7 +14,7 @@ import java.util.*;
 /**
  * Program do pobierania informacji ze strony iternetowej o pokemoach
  */
-public class ParseHTMl {
+public class ParseHTML {
     public static void main(String[] args) {
         String Url = "https://bulbapedia.bulbagarden.net/wiki/List_of_Pokémon_by_National_Pokédex_number";
         int connectionTimeoutMs = 10000; //10s
@@ -34,7 +38,7 @@ public class ParseHTMl {
                     if (row.children().get(1).text().contains("?")) break;
                     PokemonModel pokemonModel = new PokemonModel();
                     //index
-                    pokemonModel.setIndex(Integer.parseInt(row.children().get(1).text().replace("#","")));
+                    pokemonModel.setIndex(Integer.parseInt(row.children().get(1).text().replace("#", "")));
                     //name
                     pokemonModel.setName(row.children().get(3).children().first().text());
                     //generation
@@ -44,8 +48,8 @@ public class ParseHTMl {
                     type.add(row.children().get(4).children().first().children().first().html());
                     if (row.children().get(4).nextElementSibling() != null)
                         type.add(row.children().get(5).children().first().children().first().html());
-                     pokemonModel.setType(type);
-                     pokedex.put(pokemonModel.getName(),pokemonModel);
+                    pokemonModel.setType(type);
+                    pokedex.put(pokemonModel.getName(), pokemonModel);
                 }
                 generationCounter++;
             }
@@ -53,13 +57,16 @@ public class ParseHTMl {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+
         PokemonService.getInstance().setPokedex(pokedex);
 
 
         for (Map.Entry<String, PokemonModel> entry : PokemonService.getInstance().getPokedex().entrySet()) {
             try {
-                document = Jsoup.parse(new URL("https://bulbapedia.bulbagarden.net/wiki/"+entry.getValue().getName() +"_(Pokémon)"), connectionTimeoutMs);
-                System.out.println("https://bulbapedia.bulbagarden.net/wiki/"+entry.getValue().getName() +"_(Pokémon)");
+                document = Jsoup.parse(new URL("https://bulbapedia.bulbagarden.net/wiki/" + entry.getValue().getName() + "_(Pokémon)"), connectionTimeoutMs);
+                System.out.println("https://bulbapedia.bulbagarden.net/wiki/" + entry.getValue().getName() + "_(Pokémon)");
                 System.out.println(entry.getValue().getIndex());
 
                 entry.getValue().setColorText(document.select("td:contains(Pokédex color)").first().child(1).child(0).child(0).child(0).text().substring(2));
@@ -71,8 +78,9 @@ public class ParseHTMl {
 
         }
 
-        PokemonService.getInstance().saveListPokemonToFile();
 
+
+        PokemonService.getInstance().saveListPokemonToFile();
     }
 }
 // https://bulbapedia.bulbagarden.net/wiki/Ditto_(Pokémon)

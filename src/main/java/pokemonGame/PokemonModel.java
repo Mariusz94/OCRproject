@@ -1,3 +1,5 @@
+package pokemonGame;
+
 import sun.plugin.dom.css.RGBColor;
 
 import java.awt.*;
@@ -70,7 +72,7 @@ public class PokemonModel {
 
     @Override
     public String toString() {
-        return "PokemonModel{" +
+        return "pokemonGame.PokemonModel{" +
                 "index=" + index +
                 ", name='" + name + '\'' +
                 ", generation=" + generation +
